@@ -289,7 +289,6 @@ declare namespace BalenaSdk {
 	interface Application {
 		id: number;
 		app_name: string;
-		device_type: string;
 		slug: string;
 		is_accessible_by_support_until__date: string;
 		is_host: boolean;
@@ -297,6 +296,7 @@ declare namespace BalenaSdk {
 		is_public: boolean;
 
 		application_type: NavigationResource<ApplicationType>;
+		is_for__device_type: NavigationResource<DeviceType>;
 		depends_on__application: NavigationResource<Application>;
 		organization: NavigationResource<Organization>;
 		should_be_running__release: NavigationResource<Release>;
@@ -513,7 +513,6 @@ declare namespace BalenaSdk {
 		custom_latitude?: string;
 		custom_longitude?: string;
 		device_name: string;
-		device_type: string;
 		download_progress?: number;
 		has_dependent: boolean;
 		id: number;
@@ -544,6 +543,7 @@ declare namespace BalenaSdk {
 		should_be_managed_by__supervisor_release: number;
 		api_heartbeat_state: 'online' | 'offline' | 'timeout' | 'unknown';
 
+		is_of__device_type: NavigationResource<DeviceType>;
 		belongs_to__application: NavigationResource<Application>;
 		belongs_to__organization: NavigationResource<Organization>;
 		belongs_to__user: NavigationResource<User>;
@@ -588,10 +588,11 @@ declare namespace BalenaSdk {
 		created_at: string;
 		id: number;
 		supervisor_version: string;
-		device_type: string;
 		image_name: string;
 		is_public: boolean;
 		note?: string;
+
+		is_for__device_type: NavigationResource<DeviceType>;
 	}
 
 	interface SupervisorStatus {

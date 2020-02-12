@@ -13,22 +13,25 @@ matrix:
 
 # what combinations to test
 environment:
+  TEST_API_URL: https://api.balena-staging.com
+  TEST_PAID_EMAIL: ''
+  TEST_PAID_PASSWORD: ''
   matrix:
   - nodejs_version: 8
-    TEST_EMAIL: test2+juan@resin.io
+    TEST_EMAIL: sdk+tests+thgreasi+staging1@resin.io
     TEST_PASSWORD:
-      secure: JyPzqbiGRJML/FHbP/8Ixg==
-    TEST_USERNAME: test2_juan
+      secure: 8nN91Lv/+o9tRYPfuSinWw==
+    TEST_USERNAME: sdk_tests_thgreasi_staging1
     TEST_REGISTER_EMAIL: test2+register+juan@resin.io
     TEST_REGISTER_PASSWORD:
       secure: 5q1vra242X+0xjTU5msqOQ==
     TEST_REGISTER_USERNAME: test2_register_juan
     TEST_ONLY_ON_ENVIRONMENT: node
   - nodejs_version: 8
-    TEST_EMAIL: sdk+tests+thgreasi@resin.io
+    TEST_EMAIL: sdk+tests+thgreasi+staging2@resin.io
     TEST_PASSWORD:
-      secure: O8/sOQP/5A4Ykiu/T6Uvyw==
-    TEST_USERNAME: sdk_tests_thgreasi
+      secure: ByZuAvlooMo9hgo5AvXsLg==
+    TEST_USERNAME: sdk_tests_thgreasi_staging2
     TEST_REGISTER_EMAIL: sdk+tests+thgreasi+register@resin.io
     TEST_REGISTER_PASSWORD:
       secure: cjQpH4aI3I85w1La/f0uiA==

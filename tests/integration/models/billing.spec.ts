@@ -13,7 +13,7 @@ import {
 } from '../setup';
 const { expect } = m.chai;
 
-describe('Billing Model', function() {
+describe.skip('Billing Model', function() {
 	describe('Free Account', function() {
 		givenLoggedInUser(beforeEach);
 

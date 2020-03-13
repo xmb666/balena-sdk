@@ -142,7 +142,7 @@ describe 'Application Model', ->
 					promise = balena.models.application.hasAny()
 					m.chai.expect(promise).to.eventually.be.true
 
-			describe 'balena.models.application.create()', ->
+			describe.only 'balena.models.application.create()', ->
 
 				it 'should reject if trying to create an app with the same name', ->
 					promise = balena.models.application.create
